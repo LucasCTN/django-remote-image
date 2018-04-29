@@ -33,7 +33,7 @@ Using the field ``RemoteImageField`` in a form (all image extensions allowed):
 
 .. code:: python
 
-   import remote_image import RemoteImageField
+   from remote_image import RemoteImageField
 
    class ExampleForm(forms.Form):
       image = RemoteImageField()
@@ -42,7 +42,7 @@ Whitelisting file extensions (the ones NOT included in the list will raise a val
 
 .. code:: python
 
-    import remote_image import RemoteImageField
+    from remote_image import RemoteImageField
 
     class ExampleForm(forms.Form):
         image = RemoteImageField(ext_whitelist=['png', 'jpg'])
@@ -51,7 +51,7 @@ Blacklisting file extensions (the ones included in the list will raise a validat
 
 .. code:: python
 
-    import remote_image import RemoteImageField
+    from remote_image import RemoteImageField
 
     class ExampleForm(forms.Form):
         image = RemoteImageField(ext_blacklist=['png', 'jpg'])
